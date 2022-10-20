@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import Messages from './Messages';
 import MessageInput from './MessageInput';
-
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 
 function ChatFunction() {
@@ -15,10 +16,12 @@ function ChatFunction() {
   }, [setSocket]);
 
   return (
-    <div className="App">
-      <header className="app-header">
-        React Chat
-      </header>
+    <Box sx={{width:'100%', backgroundColor:'black', height:'100vh', 
+    display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+       <Typography sx={{color:'white', marginBottom:'40px'}}variant="h4" gutterBottom>
+        Realtime Chat
+      </Typography>
+      <Box sx={{backgroundColor:'white',overflow:'auto', width:'36%', height:'500px'}}>
       { socket ? (
         <div className="chat-container">
           <Messages socket={socket} />
@@ -27,7 +30,8 @@ function ChatFunction() {
       ) : (
         <div>Not Connected</div>
       )}
-    </div>
+      </Box>
+    </Box>
   );
 }
 
