@@ -17,6 +17,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 
 
 
+
 export default function PrimarySearchAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -140,7 +141,7 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="error">
-                <MailIcon />
+                <MailIcon/>
               </Badge>
             </IconButton>
             <IconButton
