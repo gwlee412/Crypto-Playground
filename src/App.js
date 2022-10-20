@@ -4,14 +4,16 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ChatFunction from './chat/ChatFunction';
 import Homepage from './Homepage';
-import PrimarySearchAppBar from './Submenu';
+
 
 function App() {
   return (
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Homepage />} />
+      <Route path="chat/" element ={<ChatFunction />} />
     </Routes>
   </BrowserRouter>
   );
