@@ -1,9 +1,19 @@
+import React from 'react'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Homepage from './Homepage';
+import PrimarySearchAppBar from './Submenu';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
