@@ -1,7 +1,10 @@
-import PrimarySearchAppBar from './Submenu'
-
-export default function Homepage(){
-    return( 
-    <PrimarySearchAppBar />
-    )
+import ButtonAppBar from "./Submenu";
+import CryptoTable from "./CryptoTable";
+export default function Homepage() {
+  return (
+    <>
+      <ButtonAppBar />
+      <CryptoTable />
+    </>
+  );
 }
